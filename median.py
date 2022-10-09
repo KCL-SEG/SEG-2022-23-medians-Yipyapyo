@@ -6,7 +6,9 @@ def median(args):
     range = int(len(args))
     middle = range//2
     if (range % 2) == 0:
-        arithmeticMean = (((middle) + middle+1)/2)
+        print(f"the middle is {middle}")
+        arithmeticMean = (((args[middle-1]) + args[middle])/2)
+        print(f"middle-1 = {args[(middle-1)]} middle = {args[middle]}")
         return arithmeticMean
     else:
         return args[middle]
