@@ -1,6 +1,16 @@
 """Median calculator."""
 """ENTER YOUR SOLUTION HERE!"""
 
+def median(args):
+    args.sort()
+    range = int(len(args))
+    middle = range//2
+    if (range % 2) == 0:
+        arithmeticMean = (((middle) + middle+1)/2)
+        return arithmeticMean
+    else:
+        return args[middle]
+
 while True:
     try:
         print("Enter a list of numbers separated by commas: ")
@@ -10,3 +20,4 @@ while True:
     else:
         break
 print(numbers)
+print(f"the median is {median(numbers)}")
